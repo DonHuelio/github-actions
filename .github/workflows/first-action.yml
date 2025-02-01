@@ -16,5 +16,9 @@ jobs:
     steps: 
       - name: Print greeting
         run: echo "Hello World"
+      - name: Introduction
+        run: |
+          echo "My name is Hue"
+          echo "I am a developer!"
       - name: Print good-bye
         run: echo "Cya!" 
