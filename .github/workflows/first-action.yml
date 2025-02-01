@@ -1,0 +1,20 @@
+# Workflow Name 
+name: First Workflow
+
+# Trigger (event we're listening to)
+on: workflow_dispatch
+
+# Workflows are made up of 1 or more jobs, each job containing 1 or more actions/steps
+jobs: 
+  #jobName:
+  first-job:
+    # the environment the actions should run on - available environments/runners found here -> https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+    runs-on: ubuntu-latest
+    # list of steps that make up this "first-job" job
+    # Each step is initiated by the hyphen - and contains a name & run value - each step executes a shell script with commands, or a direct shell-scripting command, or predefined actions 
+    # This "first-job" job contains 2 steps, one that prints hello, and one that prints good bye
+    steps: 
+      - name: Print greeting
+        run: echo "Hello World"
+      - name: Print good-bye
+        run: echo "Cya!" 
